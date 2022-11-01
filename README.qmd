@@ -1,3 +1,7 @@
+---
+format: gfm
+---
+
 # Generalized Linear Model Notes
 
 This repo is a collection of notes for the generalized models. Some notes are mathematical. Some notes are in code.

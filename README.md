@@ -4,6 +4,12 @@
 This repo is a collection of notes for the generalized models. Some
 notes are mathematical. Some notes are in code.
 
+## GLM Exponential Forms.qmd
+
+This document states all formulas necessary to get pdfs and pmfs into
+exponential form and is largely based on Generalized Linear Models and
+Extensions by Hardin and Hilbe.
+
 ## gamma dispersion.R
 
 Both R and Stata’s glm implementation use the method of moments
@@ -20,7 +26,7 @@ model’s null deviance. etc. Unfortunately, many connections are
 obfuscated by different names.
 
 This R script explores connections by performing many calculations with
-two models. One trained with lm() and the other glm(family =
+two models. One trained with lm() and the other with glm(family =
 gaussian()).
 
 ## glm diagnostics.R
@@ -44,18 +50,6 @@ linear model. The calculations are checked against examples in Linear
 Regressions Analysis by Montgomery, Peck and Vining.
 
 Then a glm model with gaussian family is trained. Equality between R’s
-influence.measure’s calculations on the two models is confirmed. This
-function can be used across all glm families so I have a simple,
-consistent, and easy way of assessing fit across all types of
-generalized linear models.
-
-## GLM Exponential Forms.qmd
-
-In deriving the generalized linear model, the fist step is algebraically
-manipulating a pdf or pmf to its exponential form. Then defining a set
-of functions. Finding resources that clearly state these functions for
-all distributions is difficult. Inverse Gaussian is almost always
-completely skipped.
-
-This document states all the pieces and is largely based on Generalized
-Linear Models and Extensions by Hardin and Hilbe.
+influence.measure’s calculations is confirmed. Influence.measure() can
+be used across all glm families so I have a simple, consistent, and easy
+way of assessing fit across all types of generalized linear models.

@@ -6,15 +6,26 @@ format:
 
 ## Overview
 
-When deriving generalized linear models, the probability density or probability mass function is algebraically manipulated into the exponential form. This document lists out all the necessary pieces for this form.
+Finding resources on the mathematical aspects of the generalized linear model is challenging for a few reasons.
 
-All formulas come out of Generalized Linear Models and Extensions by Hardin and Hilber. See <https://github.com/gmcmacran/altForm> for working functions based on these equations.
+-   Many resources talk about some families, but not others. Inverse Gaussian and Negative binomial are usually left out.
+-   Only some formulas are stated while others are not. Common example is how to calculate $\phi$ in terms of the pdf's or pmf's parameters.
+-   Some formulas drop constant's because they do not affect optimization in the IRWLS algorithm.
+-   The starting pdf is assumed known and not stated. For the gamma distribution, the starting pdf has a unique parameterization.
 
-## Exponential Form
+The goal of this document is to address these problems by clearly stating **all** formulas for **all** families in a consistent order. No proofs. Minimal words. All the necessary pieces.
 
-There are other forms, but the exponential form is usually written as
+## Exponential Form and Formula Overview
 
-$$ f(y; \theta, \phi) = exp(\frac{y\theta - b(\theta)}{a(\phi)} + c(y,\phi))$$ where a, b, c are functions, $\theta$ is a function of $\mu$, and $\phi$ is a function of the nuisance parameter.
+When deriving generalized linear models, the probability density or probability mass function is algebraically manipulated into the exponential form. The idea is to start with a formula for the pdf of a distribution. For example,
+
+$$ f(y; \mu, \sigma^2) = \frac{1}{\sqrt{2\pi\sigma^2}} exp(-\frac{(y - \mu)^2}{2\sigma^2}) $$ and change it to an equivalent exponential form
+
+$$ f(y; \mu, \sigma^2) = exp(\frac{y\mu-\mu^2/2}{\sigma^2} - \frac{y^2}{2\sigma^2} - \frac{1}{2}ln(2\pi\sigma^2)) $$
+
+Then define functions a, b, and c so the specific exponential form is a special case of the general exponential form
+
+$$ f(y; \theta, \phi) = exp(\frac{y\theta - b(\theta)}{a(\phi)} + c(y,\phi))$$The general exponential form is the form optimized by the IRWLS algorithm. Note f started as a function of $\mu$ and $\sigma^2$ and ended as a function of $\theta$ and $\phi$. In addition to specifying a, b, and c, functions to calculate $\theta$ and $\phi$ are required.
 
 ## The Gaussian Family
 
@@ -32,7 +43,7 @@ $$ \theta = \mu $$ $$ \phi = \sigma^2 $$ $$ a(\phi) = \phi $$ $$ b(\theta) = \th
 
 ## The Gamma Family
 
-This distribution is usually parameter by shape and rate. For the generalized linear models framework, this pdf is parameterized by $\mu$ and $\phi$
+This distribution is usually parameterized by shape and rate. For the generalized linear models framework, this pdf is parameterized by $\mu$ and $\phi$
 
 $$ f(y; \mu, \phi) = \frac{1}{y\Gamma(\frac{1}{\phi})} (\frac{y}{\mu\phi})^\frac{1}{\phi} exp(-\frac{y}{\mu\phi})$$
 
@@ -99,3 +110,9 @@ $$ f(y; r, p) = exp(y*ln(1-p) + r*ln(p) + ln\binom{y + r - 1}{r-1}) $$
 By inspection:
 
 $$ \theta = ln(1-p) $$ $$ \phi = 1 $$ $$ a(\phi) = \phi $$ $$ b(\theta) = - r * log(1 - exp(\theta)) $$ $$ c(y, \phi) =ln\binom{y + r - 1}{r-1})$$
+
+## Additional Resources
+
+All formulas come out of Generalized Linear Models and Extensions by Hardin and Hilber.
+
+See <https://github.com/gmcmacran/altForm> for working functions based on these equations.

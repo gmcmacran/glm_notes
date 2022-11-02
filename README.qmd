@@ -35,3 +35,5 @@ Then a glm model with gaussian family is trained. Equality between R's influence
 In deriving the generalized linear model, the fist step is algebraically manipulating a pdf or pmf to its exponential form. Then defining a set of functions. Finding resources that clearly state these functions for all distributions is difficult. Inverse Gaussian is almost always completely skipped.
 
 This document states all the pieces and is largely based on Generalized Linear Models and Extensions by Hardin and Hilbe.
+
+## Test change

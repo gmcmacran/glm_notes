@@ -36,4 +36,4 @@ In deriving the generalized linear model, the fist step is algebraically manipul
 
 This document states all the pieces and is largely based on Generalized Linear Models and Extensions by Hardin and Hilbe.
 
-## Test change
+## Test change again

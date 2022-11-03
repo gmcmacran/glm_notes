@@ -146,4 +146,3 @@ all(residuals(object = model_glm, type = "deviance") == residuals(object = model
 all(residuals(object = model_glm, type = "deviance") == model_glm$residuals)
 
 sum(residuals(object = model_glm, type = "deviance")^2) == model_glm$deviance
-

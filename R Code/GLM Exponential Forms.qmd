@@ -81,7 +81,7 @@ $$ f(y; n, p) = exp(y*ln(\frac{p}{1-p}) + n*ln(1-p) + ln\binom{n}{y}) $$
 
 By inspection:
 
-$$ \theta = ln(\frac{p}{1 - p}) $$ $$ \phi = 1 $$ $$ a(\phi) = \phi $$ $$ b(\theta) = n * log(1 + exp(\theta)) $$ $$ c(y, \phi) =ln\binom{n}{y}$$
+$$ \theta = ln(\frac{p}{1 - p}) $$ $$ \phi = 1 $$ $$ a(\phi) = \phi $$ $$ b(\theta) = n * ln(1 + exp(\theta)) $$ $$ c(y, \phi) =ln\binom{n}{y}$$
 
 ## The Poisson Family
 
@@ -109,7 +109,7 @@ $$ f(y; r, p) = exp(y*ln(1-p) + r*ln(p) + ln\binom{y + r - 1}{r-1}) $$
 
 By inspection:
 
-$$ \theta = ln(1-p) $$ $$ \phi = 1 $$ $$ a(\phi) = \phi $$ $$ b(\theta) = - r * log(1 - exp(\theta)) $$ $$ c(y, \phi) =ln\binom{y + r - 1}{r-1})$$
+$$ \theta = ln(1-p) $$ $$ \phi = 1 $$ $$ a(\phi) = \phi $$ $$ b(\theta) = - r * ln(1 - exp(\theta)) $$ $$ c(y, \phi) =ln\binom{y + r - 1}{r-1})$$
 
 ## Additional Resources
 

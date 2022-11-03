@@ -136,7 +136,7 @@ By inspection:
 
 ![a(\phi) = \phi](https://latex.codecogs.com/svg.latex?a%28%5Cphi%29%20%3D%20%5Cphi "a(\phi) = \phi")
 
-![b(\theta) = n \* log(1 + exp(\theta))](https://latex.codecogs.com/svg.latex?b%28%5Ctheta%29%20%3D%20n%20%2A%20log%281%20%2B%20exp%28%5Ctheta%29%29 "b(\theta) = n * log(1 + exp(\theta))")
+![b(\theta) = n \* ln(1 + exp(\theta))](https://latex.codecogs.com/svg.latex?b%28%5Ctheta%29%20%3D%20n%20%2A%20ln%281%20%2B%20exp%28%5Ctheta%29%29 "b(\theta) = n * ln(1 + exp(\theta))")
 
 ![c(y, \phi) =ln\binom{n}{y}](https://latex.codecogs.com/svg.latex?c%28y%2C%20%5Cphi%29%20%3Dln%5Cbinom%7Bn%7D%7By%7D "c(y, \phi) =ln\binom{n}{y}")
 
@@ -180,7 +180,7 @@ By inspection:
 
 ![a(\phi) = \phi](https://latex.codecogs.com/svg.latex?a%28%5Cphi%29%20%3D%20%5Cphi "a(\phi) = \phi")
 
-![b(\theta) = - r \* log(1 - exp(\theta))](https://latex.codecogs.com/svg.latex?b%28%5Ctheta%29%20%3D%20-%20r%20%2A%20log%281%20-%20exp%28%5Ctheta%29%29 "b(\theta) = - r * log(1 - exp(\theta))")
+![b(\theta) = - r \* ln(1 - exp(\theta))](https://latex.codecogs.com/svg.latex?b%28%5Ctheta%29%20%3D%20-%20r%20%2A%20ln%281%20-%20exp%28%5Ctheta%29%29 "b(\theta) = - r * ln(1 - exp(\theta))")
 
 ![c(y, \phi) =ln\binom{y + r - 1}{r-1})](https://latex.codecogs.com/svg.latex?c%28y%2C%20%5Cphi%29%20%3Dln%5Cbinom%7By%20%2B%20r%20-%201%7D%7Br-1%7D%29 "c(y, \phi) =ln\binom{y + r - 1}{r-1})")
 
